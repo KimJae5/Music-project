@@ -18,54 +18,69 @@ position = Vector2(959, 720.5)
 scale = Vector2(1, 0.999306)
 texture = ExtResource("1_t8yqo")
 
-[node name="red boi" type="Button" parent="."]
-offset_left = 106.0
-offset_top = 352.0
-offset_right = 394.0
-offset_bottom = 630.0
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(106, 352)
+
+[node name="red boi" type="Button" parent="Node2D"]
+offset_right = 288.0
+offset_bottom = 278.0
 icon = ExtResource("2_osegu")
 
-[node name="orange boi" type="Button" parent="red boi"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/red boi"]
+
+[node name="orange boi" type="Button" parent="Node2D"]
 offset_left = 476.0
 offset_top = 5.0
 offset_right = 764.0
 offset_bottom = 283.0
 icon = ExtResource("3_ecie1")
 
-[node name="yellow boi" type="Button" parent="red boi"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/orange boi"]
+
+[node name="yellow boi" type="Button" parent="Node2D"]
 offset_left = 966.0
 offset_top = 7.0
 offset_right = 1254.0
 offset_bottom = 285.0
 icon = ExtResource("4_vi0cq")
 
-[node name="green boi" type="Button" parent="red boi"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/yellow boi"]
+
+[node name="green boi" type="Button" parent="Node2D"]
 offset_left = 1424.0
 offset_top = 8.0
 offset_right = 1712.0
 offset_bottom = 286.0
 icon = ExtResource("5_j142b")
 
-[node name="blue boi" type="Button" parent="red boi"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/green boi"]
+
+[node name="blue boi" type="Button" parent="Node2D"]
 offset_left = 234.0
 offset_top = 430.0
 offset_right = 522.0
 offset_bottom = 708.0
 icon = ExtResource("6_eykj0")
 
-[node name="purple boi" type="Button" parent="red boi"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/blue boi"]
+
+[node name="purple boi" type="Button" parent="Node2D"]
 offset_left = 712.0
 offset_top = 433.0
 offset_right = 995.0
 offset_bottom = 711.0
 icon = ExtResource("7_p4yt0")
 
-[node name="pink boi" type="Button" parent="red boi"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/purple boi"]
+
+[node name="pink boi" type="Button" parent="Node2D"]
 offset_left = 1183.0
 offset_top = 435.0
 offset_right = 1471.0
 offset_bottom = 713.0
 icon = ExtResource("8_bawo3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/pink boi"]
 
 [node name="Settings" type="Button" parent="."]
 offset_left = 42.0
