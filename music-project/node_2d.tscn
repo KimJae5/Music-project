@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://djeqpbmyhm5cw"]
+
+[ext_resource type="Texture2D" uid="uid://caeoefqapqnsj" path="res://music- background.jpg" id="1_t8yqo"]
+[ext_resource type="Texture2D" uid="uid://5yv6mouy15ps" path="res://red boi.png" id="2_osegu"]
+[ext_resource type="Texture2D" uid="uid://ckoaudm5rouvo" path="res://orange boi.png" id="3_ecie1"]
+[ext_resource type="Texture2D" uid="uid://cpbm6fkghpwsu" path="res://yellow boi.png" id="4_vi0cq"]
+[ext_resource type="Texture2D" uid="uid://wpl887jw6vw1" path="res://green boi.png" id="5_j142b"]
+[ext_resource type="Texture2D" uid="uid://e6anyuk6jksv" path="res://blue boi.png" id="6_eykj0"]
+[ext_resource type="Texture2D" uid="uid://cnvlchdh66yov" path="res://purple  boi.png" id="7_p4yt0"]
+[ext_resource type="Texture2D" uid="uid://c5xihwkct2xoe" path="res://pink boi.png" id="8_bawo3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Music-Background" type="Sprite2D" parent="."]
+position = Vector2(959, 720.5)
+scale = Vector2(1, 0.999306)
+texture = ExtResource("1_t8yqo")
+
+[node name="red boi" type="Button" parent="."]
+offset_left = 106.0
+offset_top = 352.0
+offset_right = 394.0
+offset_bottom = 630.0
+icon = ExtResource("2_osegu")
+
+[node name="orange boi" type="Button" parent="."]
+offset_left = 582.0
+offset_top = 357.0
+offset_right = 870.0
+offset_bottom = 635.0
+icon = ExtResource("3_ecie1")
+
+[node name="yellow boi" type="Button" parent="."]
+offset_left = 1072.0
+offset_top = 359.0
+offset_right = 1360.0
+offset_bottom = 637.0
+icon = ExtResource("4_vi0cq")
+
+[node name="green boi" type="Button" parent="."]
+offset_left = 1530.0
+offset_top = 360.0
+offset_right = 1818.0
+offset_bottom = 638.0
+icon = ExtResource("5_j142b")
+
+[node name="blue boi" type="Button" parent="."]
+offset_left = 340.0
+offset_top = 782.0
+offset_right = 628.0
+offset_bottom = 1060.0
+icon = ExtResource("6_eykj0")
+
+[node name="purple boi" type="Button" parent="."]
+offset_left = 818.0
+offset_top = 785.0
+offset_right = 1101.0
+offset_bottom = 1063.0
+icon = ExtResource("7_p4yt0")
+
+[node name="pink boi" type="Button" parent="."]
+offset_left = 1289.0
+offset_top = 787.0
+offset_right = 1577.0
+offset_bottom = 1065.0
+icon = ExtResource("8_bawo3")
