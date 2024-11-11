@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://caeoefqapqnsj" path="res://music- background.jpg" id="1_t8yqo"]
 [ext_resource type="Texture2D" uid="uid://5yv6mouy15ps" path="res://red boi.png" id="2_osegu"]
-[ext_resource type="Texture2D" uid="uid://bmusynn67tx0i" path="res://Untitled-1.jpg" id="2_shq22"]
 [ext_resource type="Texture2D" uid="uid://ckoaudm5rouvo" path="res://orange boi.png" id="3_ecie1"]
 [ext_resource type="Texture2D" uid="uid://cpbm6fkghpwsu" path="res://yellow boi.png" id="4_vi0cq"]
 [ext_resource type="Texture2D" uid="uid://wpl887jw6vw1" path="res://green boi.png" id="5_j142b"]
 [ext_resource type="Texture2D" uid="uid://e6anyuk6jksv" path="res://blue boi.png" id="6_eykj0"]
 [ext_resource type="Texture2D" uid="uid://cnvlchdh66yov" path="res://purple  boi.png" id="7_p4yt0"]
 [ext_resource type="Texture2D" uid="uid://c5xihwkct2xoe" path="res://pink boi.png" id="8_bawo3"]
+[ext_resource type="Texture2D" uid="uid://rm3tx46fycgb" path="res://volume.jpg" id="10_8ys24"]
 [ext_resource type="Texture2D" uid="uid://cgennyramseh2" path="res://Untitled-2.jpg" id="10_vcqak"]
 
 [node name="Node2D" type="Node2D"]
@@ -17,41 +17,6 @@
 position = Vector2(959, 720.5)
 scale = Vector2(1, 0.999306)
 texture = ExtResource("1_t8yqo")
-
-[node name="Untitled-1" type="Sprite2D" parent="."]
-position = Vector2(231, 521)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
-
-[node name="Untitled-1" type="Sprite2D" parent="Untitled-1"]
-position = Vector2(246.442, 446.977)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
-
-[node name="Untitled-2" type="Sprite2D" parent="Untitled-1"]
-position = Vector2(1248.08, 450.066)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
-
-[node name="Untitled-3" type="Sprite2D" parent="Untitled-1"]
-position = Vector2(750.961, 446.977)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
-
-[node name="Untitled-4" type="Sprite2D" parent="Untitled-1"]
-position = Vector2(1498.75, 5.14948)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
-
-[node name="Untitled-5" type="Sprite2D" parent="Untitled-1"]
-position = Vector2(1017.5, 11.3289)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
-
-[node name="Untitled-6" type="Sprite2D" parent="Untitled-1"]
-position = Vector2(500.288, 5.14948)
-scale = Vector2(0.945455, 0.970968)
-texture = ExtResource("2_shq22")
 
 [node name="red boi" type="Button" parent="."]
 offset_left = 106.0
@@ -108,3 +73,9 @@ offset_top = 27.0
 offset_right = 230.0
 offset_bottom = 215.0
 icon = ExtResource("10_vcqak")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Volume" type="Sprite2D" parent="."]
+position = Vector2(1661, 130)
+texture = ExtResource("10_8ys24")
