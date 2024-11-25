@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://djeqpbmyhm5cw"]
+[gd_scene load_steps=13 format=3 uid="uid://djeqpbmyhm5cw"]
 
 [ext_resource type="Texture2D" uid="uid://caeoefqapqnsj" path="res://music- background.jpg" id="1_t8yqo"]
+[ext_resource type="Script" path="res://node_2d.gd" id="2_bhrrg"]
 [ext_resource type="Texture2D" uid="uid://5yv6mouy15ps" path="res://red boi.png" id="2_osegu"]
 [ext_resource type="Texture2D" uid="uid://ckoaudm5rouvo" path="res://orange boi.png" id="3_ecie1"]
 [ext_resource type="Texture2D" uid="uid://cpbm6fkghpwsu" path="res://yellow boi.png" id="4_vi0cq"]
+[ext_resource type="AudioStream" uid="uid://d1y3avf65bfqh" path="res://mixkit-retro-arcade-casino-notification-211.wav" id="4_w4xxj"]
 [ext_resource type="Texture2D" uid="uid://wpl887jw6vw1" path="res://green boi.png" id="5_j142b"]
 [ext_resource type="Texture2D" uid="uid://e6anyuk6jksv" path="res://blue boi.png" id="6_eykj0"]
 [ext_resource type="Texture2D" uid="uid://cnvlchdh66yov" path="res://purple  boi.png" id="7_p4yt0"]
@@ -20,6 +22,7 @@ texture = ExtResource("1_t8yqo")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(106, 352)
+script = ExtResource("2_bhrrg")
 
 [node name="red boi" type="Button" parent="Node2D"]
 offset_right = 288.0
@@ -27,6 +30,7 @@ offset_bottom = 278.0
 icon = ExtResource("2_osegu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/red boi"]
+stream = ExtResource("4_w4xxj")
 
 [node name="orange boi" type="Button" parent="Node2D"]
 offset_left = 476.0
@@ -94,3 +98,12 @@ icon = ExtResource("10_vcqak")
 [node name="Volume" type="Sprite2D" parent="."]
 position = Vector2(1661, 130)
 texture = ExtResource("10_8ys24")
+
+[connection signal="mouse_entered" from="Node2D/red boi" to="Node2D" method="_on_red_boi_mouse_entered"]
+[connection signal="pressed" from="Node2D/red boi" to="Node2D" method="_on_red_boi_pressed"]
+[connection signal="pressed" from="Node2D/orange boi" to="Node2D" method="_on_orange_boi_pressed"]
+[connection signal="pressed" from="Node2D/yellow boi" to="Node2D" method="_on_yellow_boi_pressed"]
+[connection signal="pressed" from="Node2D/green boi" to="Node2D" method="_on_green_boi_pressed"]
+[connection signal="pressed" from="Node2D/blue boi" to="Node2D" method="_on_blue_boi_pressed"]
+[connection signal="pressed" from="Node2D/purple boi" to="Node2D" method="_on_purple_boi_pressed"]
+[connection signal="pressed" from="Node2D/pink boi" to="Node2D" method="_on_pink_boi_pressed"]
