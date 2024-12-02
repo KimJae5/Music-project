@@ -12,11 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://cnvlchdh66yov" path="res://purple  boi.png" id="7_p4yt0"]
 [ext_resource type="AudioStream" uid="uid://4rhxlc6r3805" path="res://316906__jaz_the_man_2__mi.wav" id="8_2yeyp"]
 [ext_resource type="Texture2D" uid="uid://c5xihwkct2xoe" path="res://pink boi.png" id="8_bawo3"]
-[ext_resource type="Texture2D" uid="uid://cgennyramseh2" path="res://Untitled-2.jpg" id="10_vcqak"]
 [ext_resource type="AudioStream" uid="uid://dip2jtgqi6whv" path="res://316904__jaz_the_man_2__fa.wav" id="10_wna6a"]
 [ext_resource type="AudioStream" uid="uid://0kl3cy3p5sqc" path="res://316912__jaz_the_man_2__sol.wav" id="12_1wger"]
 [ext_resource type="AudioStream" uid="uid://dy5koalhom0rk" path="res://316902__jaz_the_man_2__la.wav" id="14_ahnn2"]
 [ext_resource type="AudioStream" uid="uid://bsxyk1ddoltkp" path="res://piano-key-b-major_B_major.wav" id="16_bk51q"]
+[ext_resource type="Script" path="res://menu.gd" id="18_8mwuc"]
 [ext_resource type="Script" path="res://volume_slider.gd" id="18_fvpys"]
 
 [node name="Node2D" type="Node2D"]
@@ -98,13 +98,6 @@ icon = ExtResource("8_bawo3")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/pink boi"]
 stream = ExtResource("16_bk51q")
 
-[node name="Settings" type="Button" parent="."]
-offset_left = 42.0
-offset_top = 27.0
-offset_right = 230.0
-offset_bottom = 215.0
-icon = ExtResource("10_vcqak")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="volume slider" type="HSlider" parent="."]
@@ -124,6 +117,27 @@ offset_right = 1685.0
 offset_bottom = 160.0
 text = "VOLUME"
 
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 56.0
+offset_top = 110.0
+offset_right = 170.0
+offset_bottom = 137.0
+script = ExtResource("18_8mwuc")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 0
+offset_right = 244.0
+offset_bottom = 31.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
 [connection signal="mouse_entered" from="Node2D/red boi" to="Node2D" method="_on_red_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/red boi" to="Node2D" method="_on_red_boi_pressed"]
 [connection signal="mouse_entered" from="Node2D/orange boi" to="Node2D" method="_on_orange_boi_mouse_entered"]
@@ -138,3 +152,4 @@ text = "VOLUME"
 [connection signal="pressed" from="Node2D/purple boi" to="Node2D" method="_on_purple_boi_pressed"]
 [connection signal="mouse_entered" from="Node2D/pink boi" to="Node2D" method="_on_pink_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/pink boi" to="Node2D" method="_on_pink_boi_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Exit" to="Menu" method="_on_exit_pressed"]
