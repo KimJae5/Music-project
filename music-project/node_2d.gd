@@ -16,24 +16,51 @@ func _on_red_boi_pressed() -> void:
 
 
 func _on_orange_boi_pressed() -> void:
-	pass # Replace with function body.
+	$"orange boi/AudioStreamPlayer".play()
 
 
 func _on_yellow_boi_pressed() -> void:
-	pass # Replace with function body.
+	$"yellow boi/AudioStreamPlayer".play()
 
 
 func _on_green_boi_pressed() -> void:
-	pass # Replace with function body.
+	$"green boi/AudioStreamPlayer".play()
 
 
 func _on_blue_boi_pressed() -> void:
-	pass # Replace with function body.
+	$"blue boi/AudioStreamPlayer".play()
 
 
 func _on_purple_boi_pressed() -> void:
-	pass # Replace with function body.
+	$"purple boi/AudioStreamPlayer".play()
 
 
 func _on_pink_boi_pressed() -> void:
-	pass # Replace with function body.
+	$"pink boi/AudioStreamPlayer".play()
+
+#Hover Audio for the buttons
+func _on_red_boi_mouse_entered() -> void:
+	$"red boi/AudioStreamPlayer".play()
+
+func _on_yellow_boi_mouse_entered() -> void:
+	$"yellow boi/AudioStreamPlayer".play()
+
+
+func _on_orange_boi_mouse_entered() -> void:
+	$"orange boi/AudioStreamPlayer".play()
+
+
+func _on_green_boi_mouse_entered() -> void:
+	$"green boi/AudioStreamPlayer".play()
+
+
+func _on_blue_boi_mouse_entered() -> void:
+	$"blue boi/AudioStreamPlayer".play()
+	
+
+func _on_purple_boi_mouse_entered() -> void:
+	$"purple boi/AudioStreamPlayer".play()
+	
+
+func _on_pink_boi_mouse_entered() -> void:
+	$"pink boi/AudioStreamPlayer".play()

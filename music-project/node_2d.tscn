@@ -1,17 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://djeqpbmyhm5cw"]
+[gd_scene load_steps=19 format=3 uid="uid://djeqpbmyhm5cw"]
 
 [ext_resource type="Texture2D" uid="uid://caeoefqapqnsj" path="res://music- background.jpg" id="1_t8yqo"]
 [ext_resource type="Script" path="res://node_2d.gd" id="2_bhrrg"]
 [ext_resource type="Texture2D" uid="uid://5yv6mouy15ps" path="res://red boi.png" id="2_osegu"]
 [ext_resource type="Texture2D" uid="uid://ckoaudm5rouvo" path="res://orange boi.png" id="3_ecie1"]
+[ext_resource type="AudioStream" uid="uid://b8a0yebuo3wwd" path="res://316899__jaz_the_man_2__do-stretched.wav" id="4_82o6p"]
 [ext_resource type="Texture2D" uid="uid://cpbm6fkghpwsu" path="res://yellow boi.png" id="4_vi0cq"]
-[ext_resource type="AudioStream" uid="uid://d1y3avf65bfqh" path="res://mixkit-retro-arcade-casino-notification-211.wav" id="4_w4xxj"]
 [ext_resource type="Texture2D" uid="uid://wpl887jw6vw1" path="res://green boi.png" id="5_j142b"]
 [ext_resource type="Texture2D" uid="uid://e6anyuk6jksv" path="res://blue boi.png" id="6_eykj0"]
+[ext_resource type="AudioStream" uid="uid://bcgmsjscl21oq" path="res://316908__jaz_the_man_2__re.wav" id="6_f1v48"]
 [ext_resource type="Texture2D" uid="uid://cnvlchdh66yov" path="res://purple  boi.png" id="7_p4yt0"]
+[ext_resource type="AudioStream" uid="uid://4rhxlc6r3805" path="res://316906__jaz_the_man_2__mi.wav" id="8_2yeyp"]
 [ext_resource type="Texture2D" uid="uid://c5xihwkct2xoe" path="res://pink boi.png" id="8_bawo3"]
-[ext_resource type="Texture2D" uid="uid://rm3tx46fycgb" path="res://volume.jpg" id="10_8ys24"]
 [ext_resource type="Texture2D" uid="uid://cgennyramseh2" path="res://Untitled-2.jpg" id="10_vcqak"]
+[ext_resource type="AudioStream" uid="uid://dip2jtgqi6whv" path="res://316904__jaz_the_man_2__fa.wav" id="10_wna6a"]
+[ext_resource type="AudioStream" uid="uid://0kl3cy3p5sqc" path="res://316912__jaz_the_man_2__sol.wav" id="12_1wger"]
+[ext_resource type="AudioStream" uid="uid://dy5koalhom0rk" path="res://316902__jaz_the_man_2__la.wav" id="14_ahnn2"]
+[ext_resource type="AudioStream" uid="uid://bsxyk1ddoltkp" path="res://piano-key-b-major_B_major.wav" id="16_bk51q"]
+[ext_resource type="Script" path="res://volume_slider.gd" id="18_fvpys"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,7 +36,7 @@ offset_bottom = 278.0
 icon = ExtResource("2_osegu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/red boi"]
-stream = ExtResource("4_w4xxj")
+stream = ExtResource("4_82o6p")
 
 [node name="orange boi" type="Button" parent="Node2D"]
 offset_left = 476.0
@@ -40,6 +46,7 @@ offset_bottom = 283.0
 icon = ExtResource("3_ecie1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/orange boi"]
+stream = ExtResource("6_f1v48")
 
 [node name="yellow boi" type="Button" parent="Node2D"]
 offset_left = 966.0
@@ -49,6 +56,7 @@ offset_bottom = 285.0
 icon = ExtResource("4_vi0cq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/yellow boi"]
+stream = ExtResource("8_2yeyp")
 
 [node name="green boi" type="Button" parent="Node2D"]
 offset_left = 1424.0
@@ -58,6 +66,7 @@ offset_bottom = 286.0
 icon = ExtResource("5_j142b")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/green boi"]
+stream = ExtResource("10_wna6a")
 
 [node name="blue boi" type="Button" parent="Node2D"]
 offset_left = 234.0
@@ -67,6 +76,7 @@ offset_bottom = 708.0
 icon = ExtResource("6_eykj0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/blue boi"]
+stream = ExtResource("12_1wger")
 
 [node name="purple boi" type="Button" parent="Node2D"]
 offset_left = 712.0
@@ -76,6 +86,7 @@ offset_bottom = 711.0
 icon = ExtResource("7_p4yt0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/purple boi"]
+stream = ExtResource("14_ahnn2")
 
 [node name="pink boi" type="Button" parent="Node2D"]
 offset_left = 1183.0
@@ -85,6 +96,7 @@ offset_bottom = 713.0
 icon = ExtResource("8_bawo3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D/pink boi"]
+stream = ExtResource("16_bk51q")
 
 [node name="Settings" type="Button" parent="."]
 offset_left = 42.0
@@ -95,15 +107,34 @@ icon = ExtResource("10_vcqak")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="Volume" type="Sprite2D" parent="."]
-position = Vector2(1661, 130)
-texture = ExtResource("10_8ys24")
+[node name="volume slider" type="HSlider" parent="."]
+offset_left = 1417.0
+offset_top = 40.0
+offset_right = 1854.0
+offset_bottom = 212.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("18_fvpys")
+bus_name = "Master"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1424.0
+offset_top = 74.0
+offset_right = 1685.0
+offset_bottom = 160.0
+text = "VOLUME"
 
 [connection signal="mouse_entered" from="Node2D/red boi" to="Node2D" method="_on_red_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/red boi" to="Node2D" method="_on_red_boi_pressed"]
+[connection signal="mouse_entered" from="Node2D/orange boi" to="Node2D" method="_on_orange_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/orange boi" to="Node2D" method="_on_orange_boi_pressed"]
+[connection signal="mouse_entered" from="Node2D/yellow boi" to="Node2D" method="_on_yellow_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/yellow boi" to="Node2D" method="_on_yellow_boi_pressed"]
+[connection signal="mouse_entered" from="Node2D/green boi" to="Node2D" method="_on_green_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/green boi" to="Node2D" method="_on_green_boi_pressed"]
+[connection signal="mouse_entered" from="Node2D/blue boi" to="Node2D" method="_on_blue_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/blue boi" to="Node2D" method="_on_blue_boi_pressed"]
+[connection signal="mouse_entered" from="Node2D/purple boi" to="Node2D" method="_on_purple_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/purple boi" to="Node2D" method="_on_purple_boi_pressed"]
+[connection signal="mouse_entered" from="Node2D/pink boi" to="Node2D" method="_on_pink_boi_mouse_entered"]
 [connection signal="pressed" from="Node2D/pink boi" to="Node2D" method="_on_pink_boi_pressed"]
